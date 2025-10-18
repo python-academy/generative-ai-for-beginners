@@ -1,18 +1,17 @@
-from openai import AzureOpenAI
 import os
+from groq import Groq
+
 from dotenv import load_dotenv
 
 # load environment variables from .env file
 load_dotenv()
 
-# configure Azure OpenAI service client 
-client = AzureOpenAI(
-  azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"], 
-  api_key=os.environ['AZURE_OPENAI_API_KEY'],  
-  api_version = "2023-10-01-preview"
-  )
+# configure Groq service client 
+client = Groq(
+    api_key=os.getenv("GROK_API_KEY"),
+)
 
-deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
+deployment="llama-3.3-70b-versatile"
 
 # add your completion code
 persona = input("Tell me the historical character I want to be: ")

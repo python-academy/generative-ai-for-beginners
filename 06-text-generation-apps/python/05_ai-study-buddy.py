@@ -1,13 +1,17 @@
-from openai import OpenAI
 import os
+from groq import Groq
+
 from dotenv import load_dotenv
 
 # load environment variables from .env file
 load_dotenv()
 
-# configure Azure OpenAI service client 
-client = OpenAI()
-deployment="gpt-3.5-turbo"
+# configure Groq service client 
+client = Groq(
+    api_key=os.getenv("GROK_API_KEY"),
+)
+
+deployment="llama-3.3-70b-versatile"
 
 # add your completion code
 question = input("Ask your questions on python language to your study buddy: ")
