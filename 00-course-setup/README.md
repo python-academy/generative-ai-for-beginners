@@ -23,16 +23,7 @@ In your fork: **Code -> Codespaces -> New on main**
 #### 2.1 Add a secret
 
 1. ⚙️ Gear icon -> Command Pallete-> Codespaces : Manage user secret -> Add a new secret.
-2. Name OPENAI_API_KEY, paste your key, Save.
-
-### 3.  What’s next?
-
-| I want to…          | Go to…                                                                  |
-|---------------------|-------------------------------------------------------------------------|
-| Start Lesson 1      | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
-| Work offline        | [`setup-local.md`](02-setup-local.md)                                   |
-| Setup an LLM Provider | [`providers.md`](providers.md)                                        |
-| Meet other learners | [Join our Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
+2. Name GROK_API_KEY, paste your key, Save.
 
 ## Troubleshooting
 
@@ -56,37 +47,6 @@ In your fork: **Code -> Codespaces -> New on main**
    ```cmd
    echo . > .env
    ```
-
-3. **Edit the `.env` File**: Open the `.env` file in a text editor (e.g., VS Code, Notepad++, or any other editor). Add the following line to the file, replacing `your_github_token_here` with your actual GitHub token:
-
-   ```env
-   GITHUB_TOKEN=your_github_token_here
-   ```
-
-4. **Save the File**: Save the changes and close the text editor.
-
-5. **Install `python-dotenv`**: If you haven't already, you'll need to install the `python-dotenv` package to load environment variables from the `.env` file into your Python application. You can install it using `pip`:
-
-   ```bash
-   pip install python-dotenv
-   ```
-
-6. **Load Environment Variables in Your Python Script**: In your Python script, use the `python-dotenv` package to load the environment variables from the `.env` file:
-
-   ```python
-   from dotenv import load_dotenv
-   import os
-
-   # Load environment variables from .env file
-   load_dotenv()
-
-   # Access the GITHUB_TOKEN variable
-   github_token = os.getenv("GITHUB_TOKEN")
-
-   print(github_token)
-   ```
-
-That's it! You've successfully created a `.env` file, added your GitHub token, and loaded it into your Python application.
 
 ## Let's Get Started
 
